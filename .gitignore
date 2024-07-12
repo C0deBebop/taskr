@@ -1,0 +1,4 @@
+.env
+Gemfile.lock
+.DS_Store
+.Ds_Store?
