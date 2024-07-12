@@ -13,11 +13,11 @@ class TaskrApp < Sinatra::Base
     
   end
 
-  get 'top-career' do 
+  get '/top-career' do 
   
   end
 
-  get 'job/listing/:id' do 
+  get '/job/listing/:id' do 
      
   end
 
