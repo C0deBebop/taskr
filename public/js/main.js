@@ -1,7 +1,8 @@
-const signin = document.querySelector('#signin');
+const signinLink = document.querySelector('#signin');
+const signupLink = document.querySelector('#signup');
 
 
-function createPopWindow() {
+function signinForm(){
     let overlayDiv = document.createElement('div');
     let div = document.createElement('div');
     let h1Heading = document.createElement('h1');
@@ -34,13 +35,87 @@ function createPopWindow() {
     removeWindow(h2Heading);
 }
 
+function signupForm(){
+   let overlayDiv = document.createElement('div');
+   let div = document.createElement('div'); 
+   let signupHeading = document.createElement('h1');  
+   let form = document.createElement('form');
+   let nameText = document.createElement('input');
+   let emailText = document.createElement('input');
+   let passwordText = document.createElement('input');
+   let confirmPassword = document.createElement('input');
+   let accountType = document.createElement('label');
+   let employerLink = document.createElement('button');
+   let employeeLink = document.createElement('button');
+   let submitButton = document.createElement('button');
+   let closeHeading = document.createElement('h2');
+   let signupText = document.createTextNode('Sign up');
+   let accountTypeText = document.createTextNode('What kind of account do you need?');
+   let closeButtonText = document.createTextNode('[X CLOSE]');
+   let employerLinkText = document.createTextNode('I’m looking to hire');
+   let employeeLinkText = document.createTextNode('I’m looking for a job');
+   let buttonText = document.createTextNode('Sign up');
+   div.setAttribute('class', 'signup');
+   form.setAttribute('id', 'signupForm');
+   nameText.setAttribute('type', 'text');
+   nameText.setAttribute('placeholder', 'Full name');
+   emailText.setAttribute('type', 'email');
+   emailText.setAttribute('placeholder', 'E -mail');
+   passwordText.setAttribute('type', 'password');
+   passwordText.setAttribute('placeholder', 'Password');
+   confirmPassword.setAttribute('type', 'password');
+   confirmPassword.setAttribute('placeholder', 'Confirm password');
+   employerLink.setAttribute('id', 'employer-link');
+   employeeLink.setAttribute('id', 'employee-link');
+   submitButton.setAttribute('id', 'signupButton');
+   overlayDiv.setAttribute('id', 'overlay');
+   closeHeading.appendChild(closeButtonText);
+   signupHeading.appendChild(signupText);
+   accountType.appendChild(accountTypeText);
+   employeeLink.appendChild(employeeLinkText);
+   employerLink.appendChild(employerLinkText);
+   submitButton.appendChild(buttonText);
+   div.appendChild(signupHeading);
+   div.appendChild(form);
+   form.appendChild(nameText);
+   form.appendChild(emailText);
+   form.appendChild(passwordText);
+   form.appendChild(confirmPassword);
+   form.appendChild(accountType);
+   form.appendChild(employerLink);
+   form.appendChild(employeeLink);
+   form.appendChild(submitButton);
+   overlayDiv.appendChild(closeHeading);
+   overlayDiv.appendChild(div);
+   document.querySelector('body').appendChild(overlayDiv);
+   removeWindow(closeHeading);
+
+}
+
+
+function signin(){
+
+}
+
+function signup(){
+
+}
+
+function createPopWindow() {}
+
 function removeWindow(close){
     close.addEventListener('click', (e) => {
         overlay.remove()
     })
 }
 
-signin.addEventListener('click', (e) => {
+signinLink.addEventListener('click', (e) => {
     e.preventDefault();
-    createPopWindow();
+    signinForm();
 })
+
+signupLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    signupForm();
+})
+
