@@ -25,7 +25,7 @@ class TaskrApp < Sinatra::Base
   end
 
   get '/create-account' do 
-    
+    erb :account
   end
 
   get '/top-career' do 
