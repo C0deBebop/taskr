@@ -21,11 +21,6 @@ class TaskrApp < Sinatra::Base
          listings.push({ title: listing['title'] })
      end   
 
-     companies = connection.exec('SELECT * FROM companies')
-     companies.each do |company|
-        listings.push({ company_name: company['name'] })
-      end   
-      puts listings
      erb :listings, :locals => {:listings => listings}
   end
 
@@ -41,7 +36,9 @@ class TaskrApp < Sinatra::Base
      
   end
 
+  get 'search/:search_term' do
 
+  end
 
   run!
 end
