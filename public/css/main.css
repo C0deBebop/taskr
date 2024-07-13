@@ -10,7 +10,7 @@ box-sizing: border-box;
 
 header {
 width: 100%;
-height: 300px;
+height: 600px;
 background: linear-gradient(#5719E2, #5F04A2);
 }
 
@@ -18,14 +18,18 @@ header h1 {
 display: block;
 width: 5%;
 padding: 50px 0 0 75px;
+}
+
+header h1 a {
+text-decoration: none; 
 color: #D9F0F8;
+font: normal 900 1em "massilia", sans-serif;   
 }
 
 nav {
-width: 25%;
+width: 20%;
 float: right;
-margin-top: -35px;
-
+margin-top: -25px;
 }
 
 nav ul li {
@@ -35,6 +39,191 @@ padding-right: 25px;
 }
 
 nav ul li a {
+font: normal 600 0.9em "massilia", sans-serif;    
 color: #D9F0F8;
 text-decoration: none;    
 }
+
+nav ul li:last-of-type {
+border: 1px solid #D9F0F8;
+padding: 10px 15px;
+border-radius: 15px;
+}
+
+#masthead {
+position: relative;    
+top: 20%;
+left: 10%;
+}
+
+#masthead h3 {
+color: #BCECFA; 
+font: normal 600 1.8em "massilia", sans-serif; 
+margin-bottom: 15px;    
+}
+
+#masthead input {
+width: 35%;
+height: 50px;  
+border-radius: 15px;  
+border: none;
+padding-left: 10px;
+}
+
+#masthead input::placeholder {
+padding-left: 10px;
+}
+
+#masthead p {
+color: #BCECFA;     
+font: normal 500 0.8em "massilia", sans-serif;  
+margin-top: 15px;   
+}
+
+#services {
+background: #4719E2;    
+width: 100%;
+height: 700px;
+padding: 85px 0 0 0;
+}
+
+#services h3 {
+color: #BCECFA; 
+text-align: center;
+font: normal 600 1.8em "massilia", sans-serif; 
+}
+
+#flex-container {
+display: flex;
+flex-direction: row;
+width: 70%;
+margin: 0 auto;
+}
+
+#flex-container div {
+width: 25%;  
+margin: 5% 5% 0 auto; 
+}
+
+#flex-container div img {
+display: block;    
+margin: 0 auto 25px auto;    
+}
+
+#flex-container div h4 {
+color: #BCECFA;
+font: normal 400 1.2em "massilia", sans-serif; 
+text-decoration: underline;
+margin-bottom: 10px; 
+text-align: center;
+}
+
+#flex-container div p {
+color: #BCECFA;
+font: normal 300 0.9em "massilia", sans-serif;  
+line-height: 1.8em; 
+text-align: justify;
+}
+
+#flex-footer-container {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+width: 100%;
+padding: 50px;
+background: #BCECFA;
+}
+
+#flex-container-container div {
+width: 50%;
+}
+
+#flex-container-container div:first-of-type {
+padding: 5% 0 0 5%;
+}
+
+
+#flex-footer-container h3 {
+color: #5815D7;
+font: normal 700 2em "massilia", sans-serif; 
+margin-bottom: 20px;
+text-align: center;
+}
+
+#flex-footer-container button {
+border: 2px solid #5815D7;
+color: #5815D7;
+background: rgb(250, 250, 250);
+border-radius: 15px;
+font: normal 500 0.9em "massilia", sans-serif; 
+width: 100%;
+height: 60px;
+cursor: pointer;
+margin-bottom: 20px;
+}
+
+footer p {
+text-align: center;
+color: #5815D7;   
+font: normal 500 0.9em "massilia", sans-serif; 
+padding: 15px 0; 
+}
+
+@media(max-width: 1800px){
+  nav {
+  width: 35%;
+  }
+
+}
+
+@media(max-width: 1200px){
+    nav {
+    width: 45%;
+    }
+
+  }
+
+
+  @media(min-width: 2000px){
+    nav {
+    width: 35%;
+    }
+  
+    #flex-container {
+      width: 50%;
+     }
+      
+      #flex-container div {
+      width: 20%;  
+      }
+
+      #masthead input {
+        width: 400px;
+      }
+  }
+
+  @media(max-width: 1440px){
+
+    #services {
+     height: auto;
+     padding-bottom: 100px;
+    }
+
+     #flex-container {
+        flex-direction: column; 
+    }
+
+    #flex-container div {
+        width: 100%;
+    }
+
+    #flex-container div p {
+        width: 50%;
+        margin: 0 auto;
+    }
+    #services h3 {
+        color: #BCECFA; 
+        text-align: center;
+        font: normal 600 1.4em "massilia", sans-serif; 
+        }
+  }

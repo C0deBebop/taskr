@@ -1,2 +1,6 @@
+source 'https://rubygems.org'
 gem 'dotenv'
 gem 'sinatra'
+gem 'pg'
+gem 'rerun'
+gem 'rackup'
