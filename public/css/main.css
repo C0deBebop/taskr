@@ -421,6 +421,68 @@ margin-top: -50px;
 height: 40px;
 }
 
+/* Top Career */
+
+#career-container {
+ width: 70%;
+ margin: 0 auto;
+}
+
+#career-container h3 {
+color: #5815D7; 
+font: normal 900 1.8em "massilia", sans-serif; 
+margin: 85px 0 5px 0; 
+}
+
+#career-container p {
+color: #131215;   
+font: normal 500 0.9em "massilia", sans-serif; 
+margin-bottom: 25px;
+}
+    
+
+.careers {
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+border-bottom: 1px solid #ededed;
+width: 100%;
+}
+
+.careers img {
+max-width: 100%;
+}
+
+.careers div {
+height: 175px;
+padding-top: 25px;    
+}
+
+.careers div:first-of-type {
+width: 15%;   
+margin: 2.5% auto 0 auto; 
+}
+
+.careers div:last-of-type {
+width: 85%;   
+margin: 3% auto 0 auto; 
+padding-left: 25px;
+}
+
+.careers div h4 {
+color: #5815D7;
+font: normal 900 1.2em "massilia", sans-serif; 
+}
+
+.careers div p {
+color: #131215;   
+font: normal 500 0.9em "massilia", sans-serif; 
+line-height: 2em !important;
+padding: 15px 0; 
+}
+
+
+
 
 @media(max-width: 1800px){
 nav {

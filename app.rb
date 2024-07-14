@@ -47,7 +47,7 @@ class TaskrApp < Sinatra::Base
 
 
   get '/top-career' do 
-  
+     erb :careers
   end
 
   get '/job/listing/:id' do 

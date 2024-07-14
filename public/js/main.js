@@ -100,11 +100,6 @@ function signupForm(){
  
 }
 
-
-
-
-
-
 function signin(email, password){
    fetch('http://localhost:4567/signin', {
         method: 'POST',
@@ -119,7 +114,6 @@ function signin(email, password){
 }
 
 function signup(nameText, emailText, passwordText){
-  let url = 'http://localhost:4567/signup';
   fetch('http://localhost:4567/signup', {
        method: 'POST',
        headers: {'Content-Type' : 'application/json'},
