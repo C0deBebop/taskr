@@ -58,5 +58,9 @@ class TaskrApp < Sinatra::Base
 
   end
 
+  get '/employer/add/listing' do
+   erb :'add-listing'
+  end
+
   run!
 end
