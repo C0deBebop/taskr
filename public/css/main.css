@@ -280,6 +280,7 @@ font: normal 600 0.9em "massilia", sans-serif;
 color: #5815D7;
 border: 2px solid #5815D7;
 border-radius: 15px;
+cursor: pointer;
 }
 
 #employee-link {
@@ -290,6 +291,7 @@ font: normal 600 0.9em "massilia", sans-serif;
 color: #5815D7;   
 border: 2px solid #5815D7; 
 border-radius: 15px; 
+cursor: pointer;
 }
 
 #signupButton {
@@ -301,6 +303,7 @@ color: #5815D7;
 background: #BCECFA; 
 border-radius: 15px;
 border: none;
+cursor: pointer;
 }
 
 

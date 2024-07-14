@@ -1,4 +1,4 @@
-
+require 'bcrypt'
 
 class Jobs
   def listings
@@ -50,7 +50,7 @@ class User
    end
 
    def create_secure_password(password)
-       #hash password
+      return BCrypt::Password.create(password)
    end
 
    def account_status(email)

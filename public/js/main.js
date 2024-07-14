@@ -33,6 +33,10 @@ function signinForm(){
     overlayDiv.appendChild(div);
     document.querySelector('body').appendChild(overlayDiv);
     removeWindow(h2Heading);
+
+    submitButton.addEventListener('click', (e) => {
+       signin(email.value,  password.value);
+    })
 }
 
 function signupForm(){
@@ -90,15 +94,44 @@ function signupForm(){
    document.querySelector('body').appendChild(overlayDiv);
    removeWindow(closeHeading);
 
+   submitButton.addEventListener('click', (e) => {
+      signup(nameText.value, emailText.value,  passwordText.value);
+   })
+ 
 }
 
 
-function signin(){
 
+
+
+
+function signin(email, password){
+   fetch('http://localhost:4567/signin', {
+        method: 'POST',
+        headers: {'Content-Type' : 'application/json'},
+        body: JSON.stringify({
+            email : email,
+            password : password
+        })
+   }) 
+   .then(response => response.json())
+   .catch(err => console.log(err)); 
 }
 
-function signup(){
-
+function signup(nameText, emailText, passwordText){
+  let url = 'http://localhost:4567/signup';
+  fetch('http://localhost:4567/signup', {
+       method: 'POST',
+       headers: {'Content-Type' : 'application/json'},
+       //mode: "no-cors",
+       body: JSON.stringify({
+           name : nameText,
+           email : emailText,
+           password : passwordText
+       })
+    })
+    .then(response => response.json())
+    .catch(err => console.log(err));
 }
 
 function createPopWindow() {}

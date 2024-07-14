@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'pg'
 require 'dotenv'
+require './models'
 
 Dotenv.load
 
@@ -24,9 +25,26 @@ class TaskrApp < Sinatra::Base
      erb :listings, :locals => {:listings => listings}
   end
 
-  get '/create-account' do 
-    erb :account
+  post '/signup' do 
+    @payload = JSON.parse(request.body.read, symbolize_names: true) 
+    puts @payload
+    @user = User.new
+    @password = @user.create_secure_password(:password)
   end
+
+  post '/signin' do
+    @payload = JSON.parse(request.body.read, symbolize_names: true)
+    puts @payload
+  end
+
+  get '/signin' do
+    redirect '/'
+  end
+
+  get '/signup' do
+    redirect '/'
+  end
+
 
   get '/top-career' do 
   
