@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require 'sinatra/activerecord'
 require 'pg'
 require 'dotenv'
 require './models'
@@ -11,17 +12,7 @@ class TaskrApp < Sinatra::Base
   end  
 
   get '/jobs' do
-    listings = []
-     connection = PG.connect(
-         :dbname => ENV['DB'],
-         :user => ENV['USER'],
-         :password => ENV['PASSWORD']
-     )
-     job_listings = connection.exec('SELECT * FROM listings')
-     job_listings.each do | listing |
-         listings.push({ title: listing['title'] })
-     end   
-
+     listings = []
      erb :listings, :locals => {:listings => listings}
   end
 
