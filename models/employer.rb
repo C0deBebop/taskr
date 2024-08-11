@@ -1,4 +1,4 @@
-class Employer < ActiveRecord::Base
+class Employer
    def add_company()
     #add business profile
    end  

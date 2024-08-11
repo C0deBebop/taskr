@@ -1,6 +1,6 @@
 require 'bcrypt'
 
-class User < ActiveRecord::Base
+class User 
     def create_account(account_type)
 
     end

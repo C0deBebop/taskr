@@ -1,19 +1,32 @@
 require 'sinatra/base'
-require 'sinatra/activerecord'
+require 'sequel'
 require 'pg'
 require 'dotenv'
-require './models'
+
 
 Dotenv.load
 
 class TaskrApp < Sinatra::Base
+
+  configure do
+    DB = Sequel.connect(ENV['SQLALCHEMY_URI'])
+    require './models/user.rb'
+    require './models/job.rb'
+    require './models/employer.rb'
+    require './models/applicant.rb'
+    require './models/company.rb'
+    require './models/listings.rb'
+    Dir[File.join(File.dirname(__FILE__), "models", "*.rb")].each {|model| require model}
+  end  
+
   get '/' do
      erb :index
   end  
 
   get '/jobs' do
-     listings = []
-     erb :listings, :locals => {:listings => listings}
+     #listings = []
+     @listings = DB[:listings]
+     erb :listings
   end
 
   post '/signup' do 

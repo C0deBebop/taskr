@@ -1,4 +1,4 @@
-class Job < ActiveRecord::Base
+class Job
     def listings
     #get all job listings
     end  
