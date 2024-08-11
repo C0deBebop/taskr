@@ -1,0 +1,5 @@
+*.rb linguist-detectable=true
+*.js linguist-detectable=true
+*.css linguist-detectable=false
+*.html linguist-detectable=false
+*.erb linguist-detectable=false
