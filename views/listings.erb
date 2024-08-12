@@ -1,12 +1,11 @@
+<%= erb :'partials/header'  %>
+<div class="searchbar">
+  <input type="text" name="search" placeholder="Search">
+</div>
 <% @listings.each do |listing| %>
   <div id="listings">
      <p><%= listing[:title] %></p>
   </div>
 <% end %>
-<div>
-    <input type="text" name="search" placeholder="Search">
-    <div>
 
-        
-    </div>
-</div>
+
